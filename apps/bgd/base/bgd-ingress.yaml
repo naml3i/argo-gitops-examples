@@ -4,7 +4,7 @@ metadata:
   name: bgd
 spec:
   rules:
-    - host: bgd.devnation
+    - host: localhost
       http:
         paths:
           - path: /
@@ -13,4 +13,4 @@ spec:
               service:
                 name: bgd
                 port:
-                  number: 8080
+                  number: 8888
