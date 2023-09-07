@@ -2,8 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: bgd
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx
   rules:
     - host: localhost
       http:
@@ -14,4 +15,4 @@ spec:
               service:
                 name: bgd
                 port:
-                  number: 8080
+                  number: 8888
